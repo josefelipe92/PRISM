@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>PRISM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link href="styles" rel="stylesheet">
+
+<style>
+	sup {
+  color: rgb(207, 57, 57);
+  font-size: 1em;
+  vertical-align: sub;
+}
+
+	</style>
+
+  </head>
+  <body>
+
+
+<div class="container-fluid">
+
+
+<div>
+   <table class="topheader">
+       <tr>
+           <td>
+           <image src="/Users/josefelipemunozlozano/Documents/PRISM2/logo.jpg" alt="logo" width="100"
+  height="80">
+           </image>
+           <td>
+           <td>
+    <h1>Prognostic Index for Spine Metastasis: PRISM</h1>
+       <td>
+       <tr>
+   </table>
+    </div>
+  <p class="subtitle">This software computes the algorithm used for calculating the Prognostic Index for Spine Metastasic model, a survival stratification score, was created to identify outlying patients with poor and excellent survival. Refer to original article for more information.</p>
+
+
+
+
+<!-- Question 10 ECE -->
+<div>
+    <h5>1. Gender <sup>*</sup> </h5>
+  </div>
+
+<div class="radio-buttons">
+  <div>
+  <input type="radio" class="btn-check" name="gender" id="gender1" value="2" autocomplete="off" required>
+  <label class="btn btn-secondary" for="gender1">Male</label>
+</div>
+<br>
+  <div>
+  <input type="radio" class="btn-check" name="gender" id="gender2" value="0" autocomplete="off" required>
+  <label class="btn btn-secondary" for="gender2">Female</label>
+</div>
+</div>
+<br>
+      <!-- Question 14 Location -->
+        <div>
+            <h5>2. Performance Status (KPS)<sup>*</sup></h5>
+        </div>
+          <div>
+            
+            <div>
+        <input type="radio" class="btn-check" name="kps" id="kps1" value="4" autocomplete="off">
+        <label class="btn btn-secondary" for="kps1">100: Normal no complaints; no evidence of disease.</label>
+        
+      </div>
+      <br>
+        <div>
+        
+        <input type="radio" class="btn-check" name="kps" id="kps2" value="3" autocomplete="off">
+        <label class="btn btn-secondary" for="kps2">90: Able to carry on normal activity; minor signs or symptoms of disease.</label>
+        
+      </div>
+      <br>
+        <div>
+        
+              <input type="radio" class="btn-check" name="kps" id="kps3" value="2" autocomplete="off">
+        <label class="btn btn-secondary" for="kps3">  80: Normal activity with effort; some signs or symptoms of disease.</label>
+        
+      </div>
+
+      <br>
+        <div>
+        
+              <input type="radio" class="btn-check" name="kps" id="kps4" value="1" autocomplete="off">
+        <label class="btn btn-secondary" for="kps4">  70: Cares for self; unable to carry on normal activity or to do active work.</label>
+        
+      </div>
+
+      <br>
+        <div>
+        
+              <input type="radio" class="btn-check" name="kps" id="kps5" value="0" autocomplete="off">
+        <label class="btn btn-secondary" for="kps5">  60: Requires occasional assistance, but is able to care for most of his personal needs.</label>
+        
+      </div>
+
+      <br>
+        <div>
+        
+              <input type="radio" class="btn-check" name="kps" id="kps6" value="0" autocomplete="off">
+        <label class="btn btn-secondary" for="kps6"> 50 or less: Requires considerable assistance and frequent medical care</label>
+        
+      </div>
+
+      <br>
+       
+              </div>
+        
+              <br>
+      <!-- Question 9 LVSI -->
+      <div>
+        <h5>3. Has the patient had any local treatment at the SSRS site?<sup>*</sup></h5>
+    </div>
+      <div>
+        
+        <div>
+        <input type="radio" class="btn-check" name="localtx" id="localtx1" value="0" autocomplete="off">
+        <label class="btn btn-secondary" for="localtx1">No</label>
+    
+      </div>
+      <br>
+        <div>
+    <input type="radio" class="btn-check" name="localtx" id="localtx2" value="2" autocomplete="off">
+    <label class="btn btn-secondary" for="localtx2">Previous surgery at SSRS site</label>
+    
+  </div>
+  <br>
+    <div>
+    <input type="radio" class="btn-check" name="localtx" id="localtx3" value="-2" autocomplete="off">
+    <label class="btn btn-secondary" for="localtx3">Previous radiotherapy at SSRS site</label>
+
+  </div>
+  <br>
+    <div>
+    <input type="radio" class="btn-check" name="localtx" id="localtx4" value="0" autocomplete="off">
+    <label class="btn btn-secondary" for="localtx4">Previous radiotherapy and surgery at SSRS site</label>
+
+  </div>
+    
+          </div>
+
+
+          <br>
+     <!-- Question 8 Grade -->
+     <div>
+      <h5>4. Number of organ systems, other than bone, affected by metastasis?<sup>*</sup></h5>
+  </div>
+  <div class="form-outline" >
+    <input min="0" max="20" type="number" id="typeNumber" class="form-control" />
+    <label class="form-label" for="typeNumber"></label>
+</div>
+        </div>
+    
+
+
+          <br>
+
+      <!-- Question 15 Sentinel Node -->
+      <div>
+        <h5>5. Is the metastasis solitary?<sup>*</sup></h5>
+    </div>
+      <div>
+        <div>
+    <input type="radio" class="btn-check" name="solitary" id="solitary1" value="3" autocomplete="off">
+    <label class="btn btn-secondary" for="solitary1">Solitary</label>
+   
+        </div>
+        <br>
+    <div>
+    <input type="radio" class="btn-check" name="solitary" id="solitary2" value="0" autocomplete="off">
+    <label class="btn btn-secondary" for="solitary2">Multiple</label>
+  
+  </div>
+  <br>
+
+    
+    
+          </div>
+          <br>
+ <!-- Question 15 Sentinel Node -->
+ <div>
+  <h5>6. What was the time between diagnosis of the primary lesion and metastasis?<sup>*</sup></h5>
+</div>
+<div>
+  <div>
+<input type="radio" class="btn-check" name="timing" id="timing1" value="3" autocomplete="off">
+<label class="btn btn-secondary" for="timing1">Less than 5 years</label>
+
+
+</div>
+<br>
+<div>
+
+<input type="radio" class="btn-check" name="timing" id="timing2" value="0" autocomplete="off">
+<label class="btn btn-secondary" for="timing2"> More than 5 years</label>
+
+
+</div>
+
+
+
+
+    </div>
+
+    <br>
+ 
+
+ 
+
+
+
+<!-- Button -->
+</div>
+</div>
+  <button type="button" class="btn btn-outline-secondary" value="Calculate" onclick="validate_form();">Calculate</button>
+
+  </form>
+
+  <br>
+  <br>
+
+<h3 id="mensajefinal">
+The final score is:
+
+</h3>
+<br>
+<h3>
+-Interpretation- <br>
+The grouping categories go from group 4 
+
+with the worst prognosis to group 1 
+
+with the best prognosis. <br>
+
+Survival Groups Score Range: <br>
+
+Group 4: ≤0  <br>
+
+Group 3: 1-3 <br>
+
+Group 2: 4-7 <br>
+
+Group 1: ≥7 <br>
+
+Please refer to the original article for a detailed explanation. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5675505/ <br>
+
+
+</h3>
+
+
+<h3 id="answers"></h3>
+<table id="answersTable"></table>
+
+
+<script type="text/javascript">
+    
+    function validate_form() {
+        event.preventDefault();
+  // Get the values of the required fields
+  var field1 = document.querySelector('input[name="gender"]:checked')?.value ?? "";
+  var field2 = document.querySelector('input[name="kps"]:checked')?.value ?? "";
+  var field3 = document.querySelector('input[name="localtx"]:checked')?.value ?? "";
+  var field4 = document.querySelector('input[name="solitary"]:checked')?.value ?? "";
+  var field5 = document.querySelector('input[name="timing"]:checked')?.value ?? "";
+  
+
+  // Check if any of the fields is empty
+  if (field1 == "" || field2 == "" || field3 == "" || field4 == "" || field5 == "" ) {
+    alert("Please fill out all required fields");
+  } else {
+    // All required fields are filled, call the write_name function
+    write_name();
+  }
+}
+
+
+
+
+    
+function write_name() {
+event.preventDefault();
+
+
+
+
+var gender = document.querySelector('input[name="gender"]:checked').value;
+var kps = document.querySelector('input[name="kps"]:checked').value;
+var localtx = document.querySelector('input[name="localtx"]:checked').value;
+var solitary = document.querySelector('input[name="solitary"]:checked').value;
+var timing = document.querySelector('input[name="timing"]:checked').value;
+var typeNumber = document.getElementById('typeNumber').value;
+
+
+
+
+
+var sumriskfactors = Number(gender) + Number(kps) + Number(localtx) + Number(solitary) + Number(timing) - Number(typeNumber);
+
+
+
+
+
+if (sumriskfactors <= 0){
+mensajefinal.innerHTML = "The final score is:  "+ Number(sumriskfactors) + " . Based on the cutoff the patient is in Group 4 (poor prognosis)";
+}
+else if (sumriskfactors >= 1 && sumriskfactors <= 3) {
+    mensajefinal.innerHTML = "The final score is:  "+ Number(sumriskfactors) + ". Based on the cutoff the patient is in Group 3 ";
+}
+else if (sumriskfactors >= 4 && sumriskfactors <= 7) {
+    mensajefinal.innerHTML = "The final score is:  "+ Number(sumriskfactors) + ". Based on the cutoff the patient is in Group 2";
+}
+else if (sumriskfactors >= 8) {
+    mensajefinal.innerHTML = "The final score is:  "+ Number(sumriskfactors) + ". Based on the cutoff the patient is in Group 1 (good prognosis)";
+}
+else {
+    mensajefinal.innerHTML = "It seens there was an error";
+
+};
+
+
+    }
+
+
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ </div>
+
+  </body>
+</html>
